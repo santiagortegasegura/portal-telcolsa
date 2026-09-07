@@ -45,7 +45,7 @@ export default function Dashboard() {
       const { data: rows } = await supabase
         .from("cotizaciones")
         .select("numero, total, estado, fecha, clientes(nombre)")
-        .order("total", { ascending: false })
+        .order("creado_en", { ascending: false })
         .limit(30);
       setCotizaciones(rows || []);
 
