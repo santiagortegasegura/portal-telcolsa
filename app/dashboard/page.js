@@ -85,12 +85,20 @@ export default function Dashboard() {
           </h1>
           <p className="text-sm text-gray-500">Sesión: {userEmail}</p>
         </div>
-        <button
-          onClick={handleLogout}
-          className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-50"
-        >
-          Cerrar sesión
-        </button>
+        <div className="flex gap-2">
+          <button
+            onClick={() => router.push("/dashboard/nueva-cotizacion")}
+            className="rounded-lg bg-telpurple px-3 py-1.5 text-sm text-white hover:opacity-90"
+          >
+            + Nueva cotización
+          </button>
+          <button
+            onClick={handleLogout}
+            className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-50"
+          >
+            Cerrar sesión
+          </button>
+        </div>
       </div>
 
       <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
